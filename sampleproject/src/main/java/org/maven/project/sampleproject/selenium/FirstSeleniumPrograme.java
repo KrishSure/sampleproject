@@ -14,8 +14,11 @@ public class FirstSeleniumPrograme {
 		//step 3: Creating a driver object with FirefoxDriver
 		WebDriver driver = new FirefoxDriver();
 		
-		//step 4: Launching the browser
+		//step 4: Launching the browser with URL
 		driver.get("https://www.facebook.com/");
+		
+		//step 5: Closing the browser
+		driver.close();
 	}
 
 }

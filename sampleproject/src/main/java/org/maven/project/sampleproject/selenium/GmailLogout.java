@@ -10,7 +10,7 @@ public class GmailLogout {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-System.setProperty("webdriver.gecko.driver", "D:\\Softwares\\selenium_info\\geckodriver-v0.22.0-win64\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "D:\\Softwares\\selenium_info\\geckodriver-v0.22.0-win64\\geckodriver.exe");
 		
 		WebDriver driver = new FirefoxDriver();
 		

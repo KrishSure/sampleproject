@@ -46,7 +46,7 @@ public class WebElementsExamples {
 		driver.findElement(By.xpath("//label[contains(text(),'\"+cityName+\"')]/following-sibling::input")).click();
 		 */
 
-		List<WebElement> radioButtonNames = driver.findElements(By.xpath("//label[contains(@class,'ui-checkboxradio-label')]"));
+		List<WebElement> radioButtonNames = driver.findElements(By.xpath("//label[contains(@class,'ui-checkboxradio-radio-label')]"));
 		
 		String name;
 		

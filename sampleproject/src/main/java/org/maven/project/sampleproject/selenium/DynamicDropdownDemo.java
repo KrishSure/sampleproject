@@ -9,23 +9,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DynamicDropdownDemo {
-	
+
 	public static WebDriver driver;
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
 
 		driver = new FirefoxDriver();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
 		driver.get("https://www.google.com/");
-		
+
 		driver.findElement(By.id("lst-ib")).sendKeys("selenium");
-		
+
 		List<WebElement> listElements =  driver.findElements(By.xpath("//ul[@class='sbsb_b']/li"));
-		
+
 		for(WebElement element : listElements) {
 			String displayName = element.getText();
 			System.out.println(displayName);
@@ -34,8 +34,19 @@ public class DynamicDropdownDemo {
 				break;
 			}
 		}
-		
-		driver.findElement(By.partialLinkText("Selenium WebDriver — Selenium Documentation")).click();
+		do {
+			try {
+				driver.findElement(By.partialLinkText("Selenium WebDriver — Selenium Documentation abcde")).click();
+			}catch(Exception e) {
+				try {
+					driver.findElement(By.id("pnnext")).click();
+				}
+				catch(Exception e1){
+					break;
+				}
+			}
+		}while(true);
+
 
 	}
 

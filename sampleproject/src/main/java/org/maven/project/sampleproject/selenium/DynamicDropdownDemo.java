@@ -34,18 +34,23 @@ public class DynamicDropdownDemo {
 				break;
 			}
 		}
+		boolean flag=false;
 		do {
 			try {
 				driver.findElement(By.partialLinkText("Selenium WebDriver — Selenium Documentation abcde")).click();
+				flag=true;
 			}catch(Exception e) {
 				try {
 					driver.findElement(By.id("pnnext")).click();
 				}
 				catch(Exception e1){
+					e1.printStackTrace();
 					break;
+
+					
 				}
 			}
-		}while(true);
+		}while(!flag);
 
 
 	}

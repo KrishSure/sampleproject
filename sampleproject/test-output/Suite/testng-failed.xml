@@ -5,7 +5,9 @@
     <classes>
       <class name="org.maven.project.sampleproject.testNG.GmailLoginTest">
         <methods>
+          <include name="gmailLogout"/>
           <include name="beforeClass"/>
+          <include name="gmailLogin"/>
           <include name="afterClass"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
@@ -15,12 +17,6 @@
           <include name="afterSuite"/>
         </methods>
       </class> <!-- org.maven.project.sampleproject.testNG.GmailLoginTest -->
-      <class name="org.maven.project.sampleproject.testNG.FacebookTest">
-        <methods>
-          <include name="facebookLoginWithWrongEmail"/>
-          <include name="facebookLoginWithWrongPassword"/>
-        </methods>
-      </class> <!-- org.maven.project.sampleproject.testNG.FacebookTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

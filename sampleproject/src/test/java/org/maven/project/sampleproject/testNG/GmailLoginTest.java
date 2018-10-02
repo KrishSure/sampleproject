@@ -56,11 +56,11 @@ public class GmailLoginTest {
 
 	}
 
-	@Test
+	@Test(dependsOnMethods= {"gmailLogin"})
 	public void gmailLogout() throws InterruptedException {
 		System.out.println(" I am gmail Logout Test method");
 
-		driver.get("https://www.google.com/");
+		/*driver.get("https://www.google.com/");
 
 		driver.findElement(By.linkText("Gmail")).click();
 
@@ -88,7 +88,7 @@ public class GmailLoginTest {
 
 		String emailAddress = driver.findElement(By.className("gb_Eb")).getText();
 
-		assertEquals(emailAddress, "seleniumjava75@gmail.com");
+		assertEquals(emailAddress, "seleniumjava75@gmail.com");*/
 
 		driver.findElement(By.linkText("Sign out")).click();
 
@@ -109,28 +109,36 @@ public class GmailLoginTest {
 
 		//System.setProperty("webdriver.gecko.driver", "D:\\Softwares\\selenium_info\\geckodriver-v0.22.0-win64\\geckodriver.exe");
 
-		driver = new FirefoxDriver();
+		
+	}
 
+	@AfterMethod
+	public void afterMethod() {
+		
+		System.out.println(" I am  after method");
+		
+	}
+
+	@BeforeClass
+	public void beforeClass() {
+		
+		System.out.println(" I am  before class");
+		
+		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+		
+		driver = new FirefoxDriver();
+		
 		driver.manage().window().maximize();
 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println(" I am  after method");
-		driver.close();
-	}
-
-	@BeforeClass
-	public void beforeClass() {
-		System.out.println(" I am  before class");
-		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
-	}
-
 	@AfterClass
 	public void afterClass() {
+		
 		System.out.println(" I am  after class");
+		
+		driver.close();
 	}
 
 	@BeforeTest

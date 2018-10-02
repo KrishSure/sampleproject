@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34442" started-at="2018-10-01T02:28:08Z" finished-at="2018-10-01T02:28:43Z">
+  <suite name="Suite" duration-ms="129909" started-at="2018-10-02T02:35:59Z" finished-at="2018-10-02T02:38:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34442" started-at="2018-10-01T02:28:08Z" finished-at="2018-10-01T02:28:43Z">
-      <class name="org.maven.project.sampleproject.testNG.FacebookTest">
-        <test-method status="PASS" signature="facebookLoginWithWrongEmail()[pri:0, instance:org.maven.project.sampleproject.testNG.FacebookTest@6d00a15d]" name="facebookLoginWithWrongEmail" duration-ms="34390" started-at="2018-10-01T07:58:08Z" finished-at="2018-10-01T07:58:43Z">
+    <test name="Test" duration-ms="129909" started-at="2018-10-02T02:35:59Z" finished-at="2018-10-02T02:38:09Z">
+      <class name="org.maven.project.sampleproject.testNG.GmailLoginTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="beforeSuite" is-config="true" duration-ms="17" started-at="2018-10-02T08:05:59Z" finished-at="2018-10-02T08:05:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- facebookLoginWithWrongEmail -->
-      </class> <!-- org.maven.project.sampleproject.testNG.FacebookTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="beforeTest" is-config="true" duration-ms="1" started-at="2018-10-02T08:05:59Z" finished-at="2018-10-02T08:05:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="beforeClass" is-config="true" duration-ms="1" started-at="2018-10-02T08:05:59Z" finished-at="2018-10-02T08:05:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="beforeMethod" is-config="true" duration-ms="11466" started-at="2018-10-02T08:05:59Z" finished-at="2018-10-02T08:06:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="gmailLogin()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="gmailLogin" duration-ms="35604" started-at="2018-10-02T08:06:10Z" finished-at="2018-10-02T08:06:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gmailLogin -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="afterMethod" is-config="true" duration-ms="3704" started-at="2018-10-02T08:06:46Z" finished-at="2018-10-02T08:06:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="beforeMethod" is-config="true" duration-ms="10697" started-at="2018-10-02T08:06:50Z" finished-at="2018-10-02T08:07:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="gmailLogout()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="gmailLogout" duration-ms="64758" started-at="2018-10-02T08:07:00Z" finished-at="2018-10-02T08:08:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gmailLogout -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="afterMethod" is-config="true" duration-ms="3643" started-at="2018-10-02T08:08:05Z" finished-at="2018-10-02T08:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-10-02T08:08:09Z" finished-at="2018-10-02T08:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-10-02T08:08:09Z" finished-at="2018-10-02T08:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@d2cc05a]" name="afterSuite" is-config="true" duration-ms="0" started-at="2018-10-02T08:08:09Z" finished-at="2018-10-02T08:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- org.maven.project.sampleproject.testNG.GmailLoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

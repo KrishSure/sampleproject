@@ -6,6 +6,7 @@
       <class name="org.maven.project.sampleproject.testNG.FacebookTest">
         <methods>
           <include name="facebookLoginWithWrongEmail"/>
+          <include name="facebookLoginWithWrongPassword"/>
         </methods>
       </class> <!-- org.maven.project.sampleproject.testNG.FacebookTest -->
     </classes>

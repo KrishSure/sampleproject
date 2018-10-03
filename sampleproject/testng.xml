@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="false">
   <test name="Test">
+  	<groups>
+  		<define name="UAT">
+  			<include name="bvt"></include>
+  			<include name="reg"></include>
+  		</define>
+  		<run>
+  			<!-- <include name="bvt"></include> -->
+  			<!-- <exclude name="bvt"></exclude> -->
+  			<include name="UAT"></include>
+  		</run>
+  	</groups>
+  	<packages>
+  		<package name="org.maven.project.sampleproject.testNG">
+  			
+  		</package>
+  	</packages>
     <classes>
-      <class name="org.maven.project.sampleproject.testNG.GmailLoginTest"/>
+     	<!--  <class name="org.maven.project.sampleproject.testNG.GmailLoginTest"/> -->
       <!-- <class name="org.maven.project.sampleproject.testNG.FacebookTest"/> -->
+     <!--  <class name="org.maven.project.sampleproject.testNG.GroupsDemo">
+      
+      	<methods>
+      		<include name="testcase1"></include>
+      		<include name="testcase2"></include>
+      		<exclude name=".*testcase.*"></exclude>
+      		<include name="testcase.*"></include>
+      	</methods>
+      </class>
+      <class name="org.maven.project.sampleproject.testNG.GroupsDemo2"></class> -->
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

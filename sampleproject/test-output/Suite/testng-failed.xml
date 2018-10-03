@@ -3,6 +3,17 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
+      <class name="org.maven.project.sampleproject.testNG.FacebookTest">
+        <methods>
+          <include name="facebookLoginWithWrongEmail"/>
+          <include name="facebookLoginWithWrongPassword"/>
+        </methods>
+      </class> <!-- org.maven.project.sampleproject.testNG.FacebookTest -->
+      <class name="org.maven.project.sampleproject.testNG.FirstTestNGExample">
+        <methods>
+          <include name="SecondTestCase"/>
+        </methods>
+      </class> <!-- org.maven.project.sampleproject.testNG.FirstTestNGExample -->
       <class name="org.maven.project.sampleproject.testNG.GmailLoginTest">
         <methods>
           <include name="gmailLogout"/>

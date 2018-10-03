@@ -1,92 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="1" total="2" passed="0">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="49541" started-at="2018-10-02T02:47:40Z" finished-at="2018-10-02T02:48:29Z">
+  <suite name="Suite" duration-ms="136" started-at="2018-10-03T02:30:06Z" finished-at="2018-10-03T02:30:06Z">
     <groups>
+      <group name="bvt">
+        <method signature="GroupsDemo.regressiontestcase()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="regressiontestcase" class="org.maven.project.sampleproject.testNG.GroupsDemo"/>
+        <method signature="GroupsDemo.testcase1()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase1" class="org.maven.project.sampleproject.testNG.GroupsDemo"/>
+        <method signature="GroupsDemo2.testcase11()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase11" class="org.maven.project.sampleproject.testNG.GroupsDemo2"/>
+      </group> <!-- bvt -->
+      <group name="reg">
+        <method signature="GroupsDemo.testcase3()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase3" class="org.maven.project.sampleproject.testNG.GroupsDemo"/>
+        <method signature="GroupsDemo2.testcase13()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase13" class="org.maven.project.sampleproject.testNG.GroupsDemo2"/>
+      </group> <!-- reg -->
     </groups>
-    <test name="Test" duration-ms="49541" started-at="2018-10-02T02:47:40Z" finished-at="2018-10-02T02:48:29Z">
-      <class name="org.maven.project.sampleproject.testNG.GmailLoginTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="beforeSuite" is-config="true" duration-ms="24" started-at="2018-10-02T08:17:40Z" finished-at="2018-10-02T08:17:40Z">
+    <test name="Test" duration-ms="136" started-at="2018-10-03T02:30:06Z" finished-at="2018-10-03T02:30:06Z">
+      <class name="org.maven.project.sampleproject.testNG.GroupsDemo2">
+        <test-method status="PASS" signature="testcase11()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase11" duration-ms="4" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="beforeTest" is-config="true" duration-ms="1" started-at="2018-10-02T08:17:40Z" finished-at="2018-10-02T08:17:40Z">
+        </test-method> <!-- testcase11 -->
+        <test-method status="PASS" signature="testcase13()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase13" duration-ms="6" depends-on-groups="bvt" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="beforeClass" is-config="true" duration-ms="11534" started-at="2018-10-02T08:17:40Z" finished-at="2018-10-02T08:17:51Z">
+        </test-method> <!-- testcase13 -->
+      </class> <!-- org.maven.project.sampleproject.testNG.GroupsDemo2 -->
+      <class name="org.maven.project.sampleproject.testNG.GroupsDemo">
+        <test-method status="PASS" signature="regressiontestcase()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="regressiontestcase" duration-ms="44" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-10-02T08:17:51Z" finished-at="2018-10-02T08:17:51Z">
+        </test-method> <!-- regressiontestcase -->
+        <test-method status="PASS" signature="testcase1()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase1" duration-ms="7" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="gmailLogin()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="gmailLogin" duration-ms="34027" started-at="2018-10-02T08:17:51Z" finished-at="2018-10-02T08:18:25Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [seleniumjava765@gmail.com] but found [seleniumjava75@gmail.com]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [seleniumjava765@gmail.com] but found [seleniumjava75@gmail.com]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at org.maven.project.sampleproject.testNG.GmailLoginTest.gmailLogin(GmailLoginTest.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- testcase1 -->
+        <test-method status="PASS" signature="testcase3()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase3" duration-ms="3" depends-on-groups="bvt" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gmailLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-10-02T08:18:25Z" finished-at="2018-10-02T08:18:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="gmailLogout()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="gmailLogout" duration-ms="1" started-at="2018-10-02T08:18:25Z" depends-on-methods="org.maven.project.sampleproject.testNG.GmailLoginTest.gmailLogin" finished-at="2018-10-02T08:18:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gmailLogout -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="afterClass" is-config="true" duration-ms="3951" started-at="2018-10-02T08:18:25Z" finished-at="2018-10-02T08:18:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-10-02T08:18:29Z" finished-at="2018-10-02T08:18:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginTest@548a9f61]" name="afterSuite" is-config="true" duration-ms="0" started-at="2018-10-02T08:18:29Z" finished-at="2018-10-02T08:18:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- org.maven.project.sampleproject.testNG.GmailLoginTest -->
+        </test-method> <!-- testcase3 -->
+      </class> <!-- org.maven.project.sampleproject.testNG.GroupsDemo -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

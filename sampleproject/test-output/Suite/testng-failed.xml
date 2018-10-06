@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
+  <parameter name="UserName" value="seleniumjava75@gmail.com"/>
+  <parameter name="Password" value="Seleniumjava@75"/>
   <test name="Test(failed)">
+    <parameter name="UserName" value="seleniumjava75@gmail.com"/>
+    <parameter name="Password" value="Seleniumjava@75"/>
     <classes>
-      <class name="org.maven.project.sampleproject.testNG.FacebookTest">
+      <class name="org.maven.project.sampleproject.testNG.ParametersDemo">
         <methods>
-          <include name="facebookLoginWithWrongEmail"/>
-          <include name="facebookLoginWithWrongPassword"/>
+          <include name="facbookLogin"/>
         </methods>
-      </class> <!-- org.maven.project.sampleproject.testNG.FacebookTest -->
-      <class name="org.maven.project.sampleproject.testNG.FirstTestNGExample">
-        <methods>
-          <include name="SecondTestCase"/>
-        </methods>
-      </class> <!-- org.maven.project.sampleproject.testNG.FirstTestNGExample -->
-      <class name="org.maven.project.sampleproject.testNG.GmailLoginTest">
-        <methods>
-          <include name="gmailLogout"/>
-          <include name="beforeClass"/>
-          <include name="gmailLogin"/>
-          <include name="afterClass"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-          <include name="afterTest"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- org.maven.project.sampleproject.testNG.GmailLoginTest -->
+      </class> <!-- org.maven.project.sampleproject.testNG.ParametersDemo -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

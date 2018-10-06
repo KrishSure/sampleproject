@@ -8,12 +8,12 @@ public class GroupsDemo {
 	  System.out.println("I am first test case");
   }
   
-  @Test
+  @Test(alwaysRun=true)
   public void testcase2() {
 	  System.out.println("I am second test case");
   }
   
-  @Test(groups= {"reg"}, dependsOnGroups= {"bvt"})
+  @Test(groups= {"reg"})
   public void testcase3() {
 	  System.out.println("I am third test case");
   }

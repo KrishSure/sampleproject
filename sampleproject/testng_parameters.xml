@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+  <test name="Test">
+  <parameter name="UserName" value="dilipkumarpv8899@gmail.com"></parameter>
+  <parameter name="Password" value="123456"></parameter>
+  <parameter name="errormessage" value="The password that you've entered is incorrect"></parameter>
+  	<classes>
+  		<class name="org.maven.project.sampleproject.testNG.ParametersDemo"></class>
+  	</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

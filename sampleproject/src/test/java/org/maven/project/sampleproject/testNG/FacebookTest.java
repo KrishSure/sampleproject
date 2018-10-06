@@ -8,11 +8,14 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class FacebookTest {
+	
+	@Parameters({"UserName","Password"})
 	@Test
-	public void facebookLoginWithWrongPassword() {
+	public void facebookLoginWithWrongPassword(String username,String password) {
 		//setup
 		WebDriver driver;
 
@@ -25,9 +28,9 @@ public class FacebookTest {
 		//Exersize
 		driver.get("https://www.facebook.com/");
 		
-		driver.findElement(By.name("email")).sendKeys("dilipkumarpv8899@gmail.com");
+		driver.findElement(By.name("email")).sendKeys(username);
 		
-		driver.findElement(By.id("pass")).sendKeys("123456");
+		driver.findElement(By.id("pass")).sendKeys(password);
 		
 		driver.findElement(By.xpath("//label[@id='loginbutton']/child::input")).click();
 		

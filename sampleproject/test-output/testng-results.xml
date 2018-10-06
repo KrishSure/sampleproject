@@ -1,44 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="136" started-at="2018-10-03T02:30:06Z" finished-at="2018-10-03T02:30:06Z">
+  <suite name="Default suite" duration-ms="111" started-at="2018-10-06T10:31:33Z" finished-at="2018-10-06T10:31:33Z">
     <groups>
-      <group name="bvt">
-        <method signature="GroupsDemo.regressiontestcase()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="regressiontestcase" class="org.maven.project.sampleproject.testNG.GroupsDemo"/>
-        <method signature="GroupsDemo.testcase1()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase1" class="org.maven.project.sampleproject.testNG.GroupsDemo"/>
-        <method signature="GroupsDemo2.testcase11()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase11" class="org.maven.project.sampleproject.testNG.GroupsDemo2"/>
-      </group> <!-- bvt -->
-      <group name="reg">
-        <method signature="GroupsDemo.testcase3()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase3" class="org.maven.project.sampleproject.testNG.GroupsDemo"/>
-        <method signature="GroupsDemo2.testcase13()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase13" class="org.maven.project.sampleproject.testNG.GroupsDemo2"/>
-      </group> <!-- reg -->
     </groups>
-    <test name="Test" duration-ms="136" started-at="2018-10-03T02:30:06Z" finished-at="2018-10-03T02:30:06Z">
-      <class name="org.maven.project.sampleproject.testNG.GroupsDemo2">
-        <test-method status="PASS" signature="testcase11()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase11" duration-ms="4" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
+    <test name="Default test" duration-ms="111" started-at="2018-10-06T10:31:33Z" finished-at="2018-10-06T10:31:33Z">
+      <class name="org.maven.project.sampleproject.testNG.OptionalParamExample">
+        <test-method status="PASS" signature="testOptionParamOne(java.lang.String)[pri:0, instance:org.maven.project.sampleproject.testNG.OptionalParamExample@4439f31e]" name="testOptionParamOne" duration-ms="33" started-at="2018-10-06T16:01:33Z" finished-at="2018-10-06T16:01:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[First Param]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase11 -->
-        <test-method status="PASS" signature="testcase13()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo2@1b604f19]" name="testcase13" duration-ms="6" depends-on-groups="bvt" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
+        </test-method> <!-- testOptionParamOne -->
+        <test-method status="PASS" signature="testOptionParamTwo(java.lang.String)[pri:0, instance:org.maven.project.sampleproject.testNG.OptionalParamExample@4439f31e]" name="testOptionParamTwo" duration-ms="6" started-at="2018-10-06T16:01:33Z" finished-at="2018-10-06T16:01:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IamOptional]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase13 -->
-      </class> <!-- org.maven.project.sampleproject.testNG.GroupsDemo2 -->
-      <class name="org.maven.project.sampleproject.testNG.GroupsDemo">
-        <test-method status="PASS" signature="regressiontestcase()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="regressiontestcase" duration-ms="44" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- regressiontestcase -->
-        <test-method status="PASS" signature="testcase1()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase1" duration-ms="7" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase1 -->
-        <test-method status="PASS" signature="testcase3()[pri:0, instance:org.maven.project.sampleproject.testNG.GroupsDemo@2b98378d]" name="testcase3" duration-ms="3" depends-on-groups="bvt" started-at="2018-10-03T08:00:06Z" finished-at="2018-10-03T08:00:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase3 -->
-      </class> <!-- org.maven.project.sampleproject.testNG.GroupsDemo -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- testOptionParamTwo -->
+      </class> <!-- org.maven.project.sampleproject.testNG.OptionalParamExample -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+  <test name="Test">
+  <parameter name="UserName" value="seleniumjava75@gmail.com"></parameter>
+  <parameter name="Password" value="Seleniumjava@75"></parameter>
+  <parameter name="errormessage" value="The email address that you've entered doesn't match any account."></parameter>
+  	<classes>
+  		<class name="org.maven.project.sampleproject.testNG.ParametersDemo"></class>
+  	</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

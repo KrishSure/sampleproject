@@ -11,7 +11,7 @@ public class FirstTestNGExample {
 	  System.out.println("Welcome to TestNG");
   }
   
-  @Test
+  @Test(groups= {"bvt"})
   public void SecondTestCase() {
 	  System.out.println("Welcome to Second Test Case");
 	  assertFalse(true);

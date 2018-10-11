@@ -31,76 +31,44 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">4</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">174.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">42.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="4">org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel</td><td><a href="#m1"><b>login</b>  </a></td><td class="numi">3</td><td>1538909322377</td><td class="numi">105754</td></tr><tr class="failedodd"><td><a href="#m2"><b>login</b>  </a></td><td class="numi">3</td><td>1538909322377</td><td class="numi">105754</td></tr><tr class="failedodd"><td><a href="#m3"><b>login</b>  </a></td><td class="numi">3</td><td>1538909322377</td><td class="numi">105754</td></tr><tr class="failedodd"><td><a href="#m4"><b>login</b>  </a></td><td class="numi">3</td><td>1538909322377</td><td class="numi">105754</td></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="4">org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel</td><td><a href="#m5"><b>login</b>  </a></td><td class="numi">1</td><td>1538909445375</td><td class="numi">26674</td></tr><tr class="passedodd"><td><a href="#m6"><b>login</b>  </a></td><td class="numi">1</td><td>1538909445375</td><td class="numi">26674</td></tr><tr class="passedodd"><td><a href="#m7"><b>login</b>  </a></td><td class="numi">1</td><td>1538909445375</td><td class="numi">26674</td></tr><tr class="passedodd"><td><a href="#m8"><b>login</b>  </a></td><td class="numi">1</td><td>1538909445375</td><td class="numi">26674</td></tr>
+<tr class="failedodd"><td rowspan="1">org.maven.project.sampleproject.testNG.NewTest</td><td><a href="#m1"><b>f</b>  </a></td><td class="numi">1</td><td>1539277539245</td><td class="numi">42821</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel:login</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>saireddi.1517@gmail.com</td>
-<td>7207206111</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="2">
-<p>expected [saireddi.1517@gmail.com] but found [seleniumjava75@gmail.com]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:176)
-<br/>at org.testng.Assert.assertEquals(Assert.java:186)
-<br/>at org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel.login(DataproviderExampleWithExcel.java:96)
+<h2 id="m1">org.maven.project.sampleproject.testNG.NewTest:f</h2>
+<div style="padding-left:3em">
+<p>Unable to locate element: #pas
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;VSURE-LAP&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 25008, moz:profile: C:\Users\vsure.ORADEV\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 581671ac-0439-4536-bdfd-bc7873de5365
+*** Element info: {Using=id, value=pas}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:188)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy7.clear(Unknown Source)
+<br/>at org.maven.project.sampleproject.selenium.pages.FacebookLoginPage.enterValueForpasswordTextField(FacebookLoginPage.java:23)
+<br/>at org.maven.project.sampleproject.testNG.NewTest.f(NewTest.java:34)
 <br/>25 lines not shown
-</td></tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel:login</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>dilipkumarpv8899@gmail.com</td>
-<td>Dilip258963</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="2">
-<p>expected [dilipkumarpv8899@gmail.com] but found [seleniumjava75@gmail.com]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:176)
-<br/>at org.testng.Assert.assertEquals(Assert.java:186)
-<br/>at org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel.login(DataproviderExampleWithExcel.java:96)
-<br/>25 lines not shown
-</td></tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel:login</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>dilipkumarpv9988@gmail.com</td>
-<td>Dilip258963</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="2">
-<p>expected [dilipkumarpv9988@gmail.com] but found [seleniumjava75@gmail.com]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:176)
-<br/>at org.testng.Assert.assertEquals(Assert.java:186)
-<br/>at org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel.login(DataproviderExampleWithExcel.java:96)
-<br/>25 lines not shown
-</td></tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel:login</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr>
-<tr class="param stripe"><td>seleniumjava75@gmail.com</td>
-<td>Seleniumjava@75</td>
-</tr>
-</table>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

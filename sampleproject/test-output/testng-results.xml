@@ -1,41 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" total="4" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="174360" started-at="2018-10-07T10:48:22Z" finished-at="2018-10-07T10:51:16Z">
+  <suite name="Default suite" duration-ms="42856" started-at="2018-10-11T17:05:39Z" finished-at="2018-10-11T17:06:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="174360" started-at="2018-10-07T10:48:22Z" finished-at="2018-10-07T10:51:16Z">
-      <class name="org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel">
-        <test-method status="PASS" signature="setUP()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="setUP" is-config="true" duration-ms="18710" started-at="2018-10-07T16:18:23Z" finished-at="2018-10-07T16:18:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="login" duration-ms="26026" started-at="2018-10-07T16:18:42Z" data-provider="dataMethod" finished-at="2018-10-07T16:19:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dilipkumarpv9988@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Dilip258963]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
+    <test name="Default test" duration-ms="42856" started-at="2018-10-11T17:05:39Z" finished-at="2018-10-11T17:06:22Z">
+      <class name="org.maven.project.sampleproject.testNG.NewTest">
+        <test-method status="FAIL" signature="f()[pri:0, instance:org.maven.project.sampleproject.testNG.NewTest@4520ebad]" name="f" duration-ms="42821" started-at="2018-10-11T22:35:39Z" finished-at="2018-10-11T22:36:22Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [dilipkumarpv9988@gmail.com] but found [seleniumjava75@gmail.com]]]>
+              <![CDATA[Unable to locate element: #pas
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'VSURE-LAP', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 25008, moz:profile: C:\Users\vsure.ORADEV\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 581671ac-0439-4536-bdfd-bc7873de5365
+*** Element info: {Using=id, value=pas}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [dilipkumarpv9988@gmail.com] but found [seleniumjava75@gmail.com]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel.login(DataproviderExampleWithExcel.java:96)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #pas
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'VSURE-LAP', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 25008, moz:profile: C:\Users\vsure.ORADEV\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 581671ac-0439-4536-bdfd-bc7873de5365
+*** Element info: {Using=id, value=pas}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.clear(Unknown Source)
+	at org.maven.project.sampleproject.selenium.pages.FacebookLoginPage.enterValueForpasswordTextField(FacebookLoginPage.java:23)
+	at org.maven.project.sampleproject.testNG.NewTest.f(NewTest.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -62,165 +73,11 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="tearDown" is-config="true" duration-ms="3363" started-at="2018-10-07T16:19:08Z" finished-at="2018-10-07T16:19:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUP()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="setUP" is-config="true" duration-ms="10654" started-at="2018-10-07T16:19:11Z" finished-at="2018-10-07T16:19:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="login" duration-ms="25328" started-at="2018-10-07T16:19:22Z" data-provider="dataMethod" finished-at="2018-10-07T16:19:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[saireddi.1517@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[7207206111]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [saireddi.1517@gmail.com] but found [seleniumjava75@gmail.com]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [saireddi.1517@gmail.com] but found [seleniumjava75@gmail.com]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel.login(DataproviderExampleWithExcel.java:96)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="tearDown" is-config="true" duration-ms="3544" started-at="2018-10-07T16:19:47Z" finished-at="2018-10-07T16:19:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUP()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="setUP" is-config="true" duration-ms="12370" started-at="2018-10-07T16:19:51Z" finished-at="2018-10-07T16:20:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="login" duration-ms="24455" started-at="2018-10-07T16:20:03Z" data-provider="dataMethod" finished-at="2018-10-07T16:20:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dilipkumarpv8899@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Dilip258963]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [dilipkumarpv8899@gmail.com] but found [seleniumjava75@gmail.com]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [dilipkumarpv8899@gmail.com] but found [seleniumjava75@gmail.com]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel.login(DataproviderExampleWithExcel.java:96)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="tearDown" is-config="true" duration-ms="4243" started-at="2018-10-07T16:20:28Z" finished-at="2018-10-07T16:20:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUP()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="setUP" is-config="true" duration-ms="12996" started-at="2018-10-07T16:20:32Z" finished-at="2018-10-07T16:20:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="login" duration-ms="26674" started-at="2018-10-07T16:20:45Z" data-provider="dataMethod" finished-at="2018-10-07T16:21:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[seleniumjava75@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Seleniumjava@75]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel@2b98378d]" name="tearDown" is-config="true" duration-ms="4473" started-at="2018-10-07T16:21:12Z" finished-at="2018-10-07T16:21:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel -->
+        </test-method> <!-- f -->
+      </class> <!-- org.maven.project.sampleproject.testNG.NewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

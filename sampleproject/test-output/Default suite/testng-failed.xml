@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel">
+      <class name="org.maven.project.sampleproject.testNG.NewTest">
         <methods>
-          <include name="login" invocation-numbers="0 1 2"/>
-          <include name="tearDown"/>
-          <include name="setUP"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- org.maven.project.sampleproject.testNG.DataproviderExampleWithExcel -->
+      </class> <!-- org.maven.project.sampleproject.testNG.NewTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

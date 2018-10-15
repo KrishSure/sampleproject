@@ -48,4 +48,40 @@ public class GmailLoginPOMTest {
 		
 		assertEquals(emailName, "dilipkumarpv9988@gmail.com");
   }
+  
+  @Test
+  public void sendingMail() {
+	  WebDriver driver;
+
+		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+
+		driver = new FirefoxDriver();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		//Exersize
+		driver.get("https://www.gmail.com/");
+		
+		GmailLoginPage glp = new GmailLoginPage(driver);  
+		
+		String emailName = glp.gmailLogin("dilipkumarpv9988@gmail.com", "Dilip258963");
+		
+		assertEquals(emailName, "dilipkumarpv9988@gmail.com");
+		
+		GmailHomePage ghp = new GmailHomePage(driver);
+		
+		ghp.clickOnComposeButton();
+		
+		ghp.setToReceipents("seleniumjava75@gmail.com");
+		
+		ghp.setSubject("Test mail from Selenium automation script");
+		
+		ghp.setMessageBody("Welcome to Selenium World");
+		
+		ghp.clickOnSendButton();
+		
+		ghp.clickOngoogleAccountIcon();
+		
+		ghp.clickOnSingOutLink();
+  }
 }

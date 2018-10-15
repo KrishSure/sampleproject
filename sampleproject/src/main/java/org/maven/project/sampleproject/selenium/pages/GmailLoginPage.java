@@ -1,5 +1,6 @@
 package org.maven.project.sampleproject.selenium.pages;
 
+import org.maven.project.sampleproject.selenium.Utility.FunctionLibrary;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,38 +14,44 @@ public class GmailLoginPage {
 	public GmailLoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		fl = new FunctionLibrary(driver);
 	}
 
 	WebDriver driver;
 	
+	FunctionLibrary fl;
 	
 	
 	@FindBy(how=How.ID, using="identifierId")
 	private WebElement emailOrPhoneField;
 	
 	public void setEmailOrPhoneField(CharSequence... keysToSend) {
-		emailOrPhoneField.sendKeys(keysToSend);
+		//emailOrPhoneField.sendKeys(keysToSend);
+		fl.setValue(emailOrPhoneField, keysToSend);
 	}
 
 	@FindBy(how=How.ID, using="identifierNext")
 	private WebElement emailNextButton;
 	
 	public void clickOnEmailNextButton() {
-		emailNextButton.click();
+		//emailNextButton.click();
+		fl.clickOnElement(emailNextButton);
 	}
 
 	@FindBy(how=How.NAME, using="password")
 	private WebElement passwordField;
 	
 	public void setPasswordField(CharSequence... keysToSend) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		/*WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(passwordField));
-		passwordField.sendKeys(keysToSend);
+		passwordField.sendKeys(keysToSend);*/		
+		fl.setValue(passwordField, keysToSend);
 	}
 
 	public GmailHomePage clickOnPasswordNextButton() {
 		
-		passwordNextButton.click();
+		//passwordNextButton.click();
+		fl.clickOnElement(passwordNextButton);
 		
 		return new GmailHomePage(driver);
 	}

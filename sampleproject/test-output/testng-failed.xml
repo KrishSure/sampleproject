@@ -5,7 +5,7 @@
     <classes>
       <class name="org.maven.project.sampleproject.testNG.GmailLoginPOMTest">
         <methods>
-          <include name="f"/>
+          <include name="sendingMail"/>
         </methods>
       </class> <!-- org.maven.project.sampleproject.testNG.GmailLoginPOMTest -->
     </classes>

@@ -1,17 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="188901" started-at="2018-10-14T10:39:46Z" finished-at="2018-10-14T10:42:55Z">
+  <suite name="Default suite" duration-ms="84104" started-at="2018-10-15T17:16:23Z" finished-at="2018-10-15T17:17:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="188901" started-at="2018-10-14T10:39:46Z" finished-at="2018-10-14T10:42:55Z">
-      <class name="org.maven.project.sampleproject.testNG.FacebookWithPOMTest">
-        <test-method status="PASS" signature="second()[pri:0, instance:org.maven.project.sampleproject.testNG.FacebookWithPOMTest@4f933fd1]" name="second" duration-ms="188858" started-at="2018-10-14T16:09:46Z" description="Verify the facebook login with correct username and password" finished-at="2018-10-14T16:12:55Z">
+    <test name="Default test" duration-ms="84104" started-at="2018-10-15T17:16:23Z" finished-at="2018-10-15T17:17:47Z">
+      <class name="org.maven.project.sampleproject.testNG.GmailLoginPOMTest">
+        <test-method status="FAIL" signature="sendingMail()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginPOMTest@4f933fd1]" name="sendingMail" duration-ms="84062" started-at="2018-10-15T22:46:23Z" finished-at="2018-10-15T22:47:47Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[FirefoxDriver: firefox on XP (53290421-0a39-45ba-9547-76861b018031)] -> name: to] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'VSURE-LAP', ip: '10.191.211.197', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 30940, moz:profile: C:\Users\vsure.ORADEV\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 53290421-0a39-45ba-9547-76861b018031]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[FirefoxDriver: firefox on XP (53290421-0a39-45ba-9547-76861b018031)] -> name: to] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'VSURE-LAP', ip: '10.191.211.197', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 30940, moz:profile: C:\Users\vsure.ORADEV\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 53290421-0a39-45ba-9547-76861b018031
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at org.maven.project.sampleproject.selenium.Utility.FunctionLibrary.checkingVisibiliy(FunctionLibrary.java:34)
+	at org.maven.project.sampleproject.selenium.Utility.FunctionLibrary.setValue(FunctionLibrary.java:28)
+	at org.maven.project.sampleproject.selenium.pages.GmailHomePage.setToReceipents(GmailHomePage.java:55)
+	at org.maven.project.sampleproject.testNG.GmailLoginPOMTest.sendingMail(GmailLoginPOMTest.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- second -->
-      </class> <!-- org.maven.project.sampleproject.testNG.FacebookWithPOMTest -->
+        </test-method> <!-- sendingMail -->
+      </class> <!-- org.maven.project.sampleproject.testNG.GmailLoginPOMTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

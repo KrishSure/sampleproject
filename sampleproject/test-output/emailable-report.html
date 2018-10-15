@@ -31,14 +31,29 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">188.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">84.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">org.maven.project.sampleproject.testNG.FacebookWithPOMTest</td><td><a href="#m1"><b>second</b>  ("Verify the facebook login with correct username and password")</a></td><td class="numi">1</td><td>1539513586478</td><td class="numi">188858</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">org.maven.project.sampleproject.testNG.GmailLoginPOMTest</td><td><a href="#m1"><b>sendingMail</b>  </a></td><td class="numi">1</td><td>1539623783343</td><td class="numi">84062</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">org.maven.project.sampleproject.testNG.FacebookWithPOMTest:second</h2>
+<h2 id="m1">org.maven.project.sampleproject.testNG.GmailLoginPOMTest:sendingMail</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of [[FirefoxDriver: firefox on XP (53290421-0a39-45ba-9547-76861b018031)] -&gt; name: to] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;VSURE-LAP&apos;, ip: &apos;10.191.211.197&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 62.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:geckodriverVersion: 0.22.0, moz:headless: false, moz:processID: 30940, moz:profile: C:\Users\vsure.ORADEV\AppDa..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 53290421-0a39-45ba-9547-76861b018031</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+<br/>at org.maven.project.sampleproject.selenium.Utility.FunctionLibrary.checkingVisibiliy(FunctionLibrary.java:34)
+<br/>at org.maven.project.sampleproject.selenium.Utility.FunctionLibrary.setValue(FunctionLibrary.java:28)
+<br/>at org.maven.project.sampleproject.selenium.pages.GmailHomePage.setToReceipents(GmailHomePage.java:55)
+<br/>at org.maven.project.sampleproject.testNG.GmailLoginPOMTest.sendingMail(GmailLoginPOMTest.java:75)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

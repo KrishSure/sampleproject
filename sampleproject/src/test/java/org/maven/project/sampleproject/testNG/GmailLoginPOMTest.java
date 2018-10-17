@@ -72,6 +72,8 @@ public class GmailLoginPOMTest {
 		
 		ghp.clickOnComposeButton();
 		
+		//ghp.clickOnRecipientsElem();
+		
 		ghp.setToReceipents("seleniumjava75@gmail.com");
 		
 		ghp.setSubject("Test mail from Selenium automation script");
@@ -80,8 +82,14 @@ public class GmailLoginPOMTest {
 		
 		ghp.clickOnSendButton();
 		
+		//ghp.clickOnSentLink();
+		
+		assertTrue(ghp.displayOfmessageSentInfo());
+		
 		ghp.clickOngoogleAccountIcon();
 		
 		ghp.clickOnSingOutLink();
+		
+		
   }
 }

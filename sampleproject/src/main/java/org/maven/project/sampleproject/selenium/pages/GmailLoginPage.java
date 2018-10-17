@@ -1,7 +1,15 @@
 package org.maven.project.sampleproject.selenium.pages;
 
+import java.util.List;
+
 import org.maven.project.sampleproject.selenium.Utility.FunctionLibrary;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -33,6 +41,74 @@ public class GmailLoginPage {
 	@FindBy(how=How.ID, using="identifierNext")
 	private WebElement emailNextButton;
 	
+	public <X> X getScreenshotAs(OutputType<X> target) throws WebDriverException {
+		return emailNextButton.getScreenshotAs(target);
+	}
+
+	public void click() {
+		emailNextButton.click();
+	}
+
+	public void submit() {
+		emailNextButton.submit();
+	}
+
+	public void sendKeys(CharSequence... keysToSend) {
+		emailNextButton.sendKeys(keysToSend);
+	}
+
+	public void clear() {
+		emailNextButton.clear();
+	}
+
+	public String getTagName() {
+		return emailNextButton.getTagName();
+	}
+
+	public String getAttribute(String name) {
+		return emailNextButton.getAttribute(name);
+	}
+
+	public boolean isSelected() {
+		return emailNextButton.isSelected();
+	}
+
+	public boolean isEnabled() {
+		return emailNextButton.isEnabled();
+	}
+
+	public String getText() {
+		return emailNextButton.getText();
+	}
+
+	public List<WebElement> findElements(By by) {
+		return emailNextButton.findElements(by);
+	}
+
+	public WebElement findElement(By by) {
+		return emailNextButton.findElement(by);
+	}
+
+	public boolean isDisplayed() {
+		return emailNextButton.isDisplayed();
+	}
+
+	public Point getLocation() {
+		return emailNextButton.getLocation();
+	}
+
+	public Dimension getSize() {
+		return emailNextButton.getSize();
+	}
+
+	public Rectangle getRect() {
+		return emailNextButton.getRect();
+	}
+
+	public String getCssValue(String propertyName) {
+		return emailNextButton.getCssValue(propertyName);
+	}
+
 	public void clickOnEmailNextButton() {
 		//emailNextButton.click();
 		fl.clickOnElement(emailNextButton);

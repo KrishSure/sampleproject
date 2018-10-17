@@ -84,13 +84,34 @@ public class GmailHomePage {
 		fl.clickOnElement(sendButton);
 	}
 	
-	@FindBy(how=How.LINK_TEXT, using="Sign Out")
+	@FindBy(how=How.LINK_TEXT, using="Sign out")
 	private WebElement signOutLink;
 	
 	public void clickOnSingOutLink() {
 		//signOutLink.click();
 		
 		fl.clickOnElement(signOutLink);
+	}
+	
+	@FindBy(how=How.XPATH, using="//div[text()='Recipients']//parent::div")
+	private WebElement recipientsElem;
+	
+	public void clickOnRecipientsElem() {
+		fl.clickOnElement(recipientsElem);
+	}
+	
+	@FindBy(how=How.LINK_TEXT, using="Sent")
+	private WebElement sentLink;
+	
+	public void clickOnSentLink() {
+		fl.clickOnElement(sentLink);
+	}
+	
+	@FindBy(how=How.XPATH, using="//span[text()='Message sent.']")
+	private WebElement messageSentInfo;
+	
+	public boolean displayOfmessageSentInfo() {
+		return fl.checkingVisibiliy(messageSentInfo).isDisplayed();
 	}
 	
 	

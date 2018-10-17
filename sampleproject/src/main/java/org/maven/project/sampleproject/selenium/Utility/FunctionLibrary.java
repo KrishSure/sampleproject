@@ -20,6 +20,8 @@ public class FunctionLibrary {
 	public void clickOnElement(WebElement element)
 	{	
 		WebElement foundElement = checkingVisibiliy(element);
+		foundElement = elementIsClickable(foundElement);
+		
 		foundElement.click();
 	}
 	
@@ -32,6 +34,10 @@ public class FunctionLibrary {
 	
 	public WebElement checkingVisibiliy(WebElement element) {
 		return  wait.until(ExpectedConditions.visibilityOf(element));		
+	}
+	
+	public WebElement elementIsClickable(WebElement element) {
+		return wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
 	public String getTextforElement(WebElement element) {

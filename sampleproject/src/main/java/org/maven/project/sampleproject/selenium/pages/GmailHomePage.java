@@ -1,9 +1,12 @@
 package org.maven.project.sampleproject.selenium.pages;
 
+import java.util.List;
+
 import org.maven.project.sampleproject.selenium.Utility.FunctionLibrary;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -87,10 +90,16 @@ public class GmailHomePage {
 	@FindBy(how=How.LINK_TEXT, using="Sign out")
 	private WebElement signOutLink;
 	
-	public void clickOnSingOutLink() {
+	public GmailLogoutPage clickOnSingOutLink() {
 		//signOutLink.click();
 		
 		fl.clickOnElement(signOutLink);
+		
+		//GmailLogoutPage glp = new GmailLogoutPage(driver);
+		
+		//return glp;
+		
+		return new GmailLogoutPage(driver);
 	}
 	
 	@FindBy(how=How.XPATH, using="//div[text()='Recipients']//parent::div")
@@ -113,6 +122,22 @@ public class GmailHomePage {
 	public boolean displayOfmessageSentInfo() {
 		return fl.checkingVisibiliy(messageSentInfo).isDisplayed();
 	}
+	
+	@FindBys(@FindBy(how=How.XPATH, using="//span[contains(text(),'Test Mail')]"))
+	private List<WebElement> emailSubjects;
+	
+	public boolean verifyEmailSubject(String value) {
+		boolean bflag=false;
+		for(WebElement subject: emailSubjects) {
+			if(subject.getText().equals(value)) {
+				bflag = true;
+				break;
+			}
+		}
+		return bflag;
+	}
+	
+	
 	
 	
 }

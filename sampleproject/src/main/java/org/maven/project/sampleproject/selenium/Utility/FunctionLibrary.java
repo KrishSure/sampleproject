@@ -1,5 +1,7 @@
 package org.maven.project.sampleproject.selenium.Utility;
 
+import java.util.UUID;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,6 +44,10 @@ public class FunctionLibrary {
 	
 	public String getTextforElement(WebElement element) {
 		return checkingVisibiliy(element).getText();
+	}
+	
+	public String generateUniqueId() {
+		return UUID.randomUUID().toString();
 	}
 
 

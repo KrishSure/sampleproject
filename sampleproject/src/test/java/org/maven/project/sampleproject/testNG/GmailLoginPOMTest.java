@@ -3,10 +3,13 @@ package org.maven.project.sampleproject.testNG;
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+import org.maven.project.sampleproject.selenium.Utility.FunctionLibrary;
 import org.maven.project.sampleproject.selenium.pages.GmailHomePage;
 import org.maven.project.sampleproject.selenium.pages.GmailLoginPage;
+import org.maven.project.sampleproject.selenium.pages.GmailLogoutPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -51,12 +54,16 @@ public class GmailLoginPOMTest {
   
   @Test
   public void sendingMail() {
+	  
+	  
 	  WebDriver driver;
 
 		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
 
 		driver = new FirefoxDriver();
-
+		
+		FunctionLibrary fl = new FunctionLibrary(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//Exersize
@@ -74,9 +81,15 @@ public class GmailLoginPOMTest {
 		
 		//ghp.clickOnRecipientsElem();
 		
+		//String uniqueID = UUID.randomUUID().toString();
+		
+		String subject = "Test Mail"+fl.generateUniqueId();
+			
+		System.out.println(subject);
+		
 		ghp.setToReceipents("seleniumjava75@gmail.com");
 		
-		ghp.setSubject("Test mail from Selenium automation script");
+		ghp.setSubject(subject);
 		
 		ghp.setMessageBody("Welcome to Selenium World");
 		
@@ -88,8 +101,18 @@ public class GmailLoginPOMTest {
 		
 		ghp.clickOngoogleAccountIcon();
 		
-		ghp.clickOnSingOutLink();
+		GmailLogoutPage glop = ghp.clickOnSingOutLink();
+		
+		glp = glop.removeAccountFromGmailList();
 		
 		
+		String emailName1 = glp.gmailLogin("seleniumjava75@gmail.com", "Seleniumjava@75");
+		
+		assertEquals(emailName1, "seleniumjava75@gmail.com");
+		
+		ghp = new GmailHomePage(driver);
+		
+		assertTrue(ghp.verifyEmailSubject(subject));		
+			
   }
 }

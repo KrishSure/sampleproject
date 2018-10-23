@@ -3,6 +3,7 @@ package org.maven.project.sampleproject.selenium.pages;
 import java.util.List;
 
 import org.maven.project.sampleproject.selenium.Utility.FunctionLibrary;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -137,6 +138,18 @@ public class GmailHomePage {
 		return bflag;
 	}
 	
+	public boolean verifyEmailSubject(String value,String subjectData) {
+		List<WebElement> emailSubjects1 = driver.findElements(By.xpath("//span[contains(text(),'"+subjectData+"')]"));	
+		boolean bflag=false;
+		for(WebElement subject: emailSubjects1) {
+			fl.checkingVisibiliy(subject);
+			if(subject.getText().equals(value)) {
+				bflag = true;
+				break;
+			}
+		}
+		return bflag;
+	}
 	
 	
 	

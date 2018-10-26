@@ -22,7 +22,7 @@ public class GmailLoginPage {
 	public GmailLoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		fl = new FunctionLibrary(driver);
+		fl = new FunctionLibrary();
 	}
 
 	WebDriver driver;
@@ -40,74 +40,7 @@ public class GmailLoginPage {
 
 	@FindBy(how=How.ID, using="identifierNext")
 	private WebElement emailNextButton;
-	
-	public <X> X getScreenshotAs(OutputType<X> target) throws WebDriverException {
-		return emailNextButton.getScreenshotAs(target);
-	}
-
-	public void click() {
-		emailNextButton.click();
-	}
-
-	public void submit() {
-		emailNextButton.submit();
-	}
-
-	public void sendKeys(CharSequence... keysToSend) {
-		emailNextButton.sendKeys(keysToSend);
-	}
-
-	public void clear() {
-		emailNextButton.clear();
-	}
-
-	public String getTagName() {
-		return emailNextButton.getTagName();
-	}
-
-	public String getAttribute(String name) {
-		return emailNextButton.getAttribute(name);
-	}
-
-	public boolean isSelected() {
-		return emailNextButton.isSelected();
-	}
-
-	public boolean isEnabled() {
-		return emailNextButton.isEnabled();
-	}
-
-	public String getText() {
-		return emailNextButton.getText();
-	}
-
-	public List<WebElement> findElements(By by) {
-		return emailNextButton.findElements(by);
-	}
-
-	public WebElement findElement(By by) {
-		return emailNextButton.findElement(by);
-	}
-
-	public boolean isDisplayed() {
-		return emailNextButton.isDisplayed();
-	}
-
-	public Point getLocation() {
-		return emailNextButton.getLocation();
-	}
-
-	public Dimension getSize() {
-		return emailNextButton.getSize();
-	}
-
-	public Rectangle getRect() {
-		return emailNextButton.getRect();
-	}
-
-	public String getCssValue(String propertyName) {
-		return emailNextButton.getCssValue(propertyName);
-	}
+		
 
 	public void clickOnEmailNextButton() {
 		//emailNextButton.click();
@@ -148,6 +81,8 @@ public class GmailLoginPage {
 		ghp.clickOngoogleAccountIcon();
 		
 		String emailName = ghp.getTextOfemailDisplayElement();
+	
+		System.out.println("email Name is :"+emailName);
 		
 		return emailName;
 	}

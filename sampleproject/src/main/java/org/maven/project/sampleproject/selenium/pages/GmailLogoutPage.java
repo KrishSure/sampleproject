@@ -16,7 +16,7 @@ public class GmailLogoutPage {
 		super();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		fl = new FunctionLibrary(driver);
+		fl = new FunctionLibrary();
 	}
 	
 	@FindBy(id="profileIdentifier")

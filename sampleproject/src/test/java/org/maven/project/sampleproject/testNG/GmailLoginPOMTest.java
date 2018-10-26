@@ -60,14 +60,21 @@ public class GmailLoginPOMTest {
 
 		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
 
-		driver = new FirefoxDriver();
+		/*driver = new FirefoxDriver();
 		
 		FunctionLibrary fl = new FunctionLibrary(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
+		
+		FunctionLibrary fl = new FunctionLibrary();
+		
+		driver = fl.launchBrowser("firefox");
+		
+		
 		
 		//Exersize
-		driver.get("https://www.gmail.com/");
+		//driver.get("https://www.gmail.com/");
+		fl.launchUrl("https://www.gmail.com/");
 		
 		GmailLoginPage glp = new GmailLoginPage(driver);  
 		

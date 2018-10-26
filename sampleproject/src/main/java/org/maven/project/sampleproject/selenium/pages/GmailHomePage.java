@@ -20,7 +20,7 @@ public class GmailHomePage {
 		super();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		fl = new FunctionLibrary(driver);
+		fl = new FunctionLibrary();
 	}
 
 	@FindBy(how=How.XPATH, using="//span[@class='gb_9a gbii']")
@@ -139,15 +139,14 @@ public class GmailHomePage {
 	}
 	
 	public boolean verifyEmailSubject(String value,String subjectData) {
-		List<WebElement> emailSubjects1 = driver.findElements(By.xpath("//span[contains(text(),'"+subjectData+"')]"));	
+		WebElement emailSubject = driver.findElement(By.xpath("//span[contains(text(),'"+subjectData+"')]"));	
 		boolean bflag=false;
-		for(WebElement subject: emailSubjects1) {
-			fl.checkingVisibiliy(subject);
-			if(subject.getText().equals(value)) {
-				bflag = true;
-				break;
+		
+			fl.checkingVisibiliy(emailSubject);
+			if(emailSubject.getText().equals(value)) {
+				bflag = true;			
 			}
-		}
+		
 		return bflag;
 	}
 	

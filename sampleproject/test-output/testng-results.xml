@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109204" started-at="2018-10-20T07:43:24Z" finished-at="2018-10-20T07:45:13Z">
+  <suite name="Default suite" duration-ms="251109" started-at="2018-10-26T15:33:48Z" finished-at="2018-10-26T15:38:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="109204" started-at="2018-10-20T07:43:24Z" finished-at="2018-10-20T07:45:13Z">
-      <class name="org.maven.project.sampleproject.testNG.GmailLoginPOMTest">
-        <test-method status="PASS" signature="sendingMail()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailLoginPOMTest@4f933fd1]" name="sendingMail" duration-ms="109175" started-at="2018-10-20T13:13:24Z" finished-at="2018-10-20T13:15:13Z">
+    <test name="Default test" duration-ms="251109" started-at="2018-10-26T15:33:48Z" finished-at="2018-10-26T15:38:00Z">
+      <class name="org.maven.project.sampleproject.testNG.GmailPOMDataDrivernTest">
+        <test-method status="PASS" signature="sendingMail()[pri:0, instance:org.maven.project.sampleproject.testNG.GmailPOMDataDrivernTest@7f9a81e8]" name="sendingMail" duration-ms="251043" started-at="2018-10-26T21:03:48Z" finished-at="2018-10-26T21:08:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendingMail -->
-      </class> <!-- org.maven.project.sampleproject.testNG.GmailLoginPOMTest -->
+      </class> <!-- org.maven.project.sampleproject.testNG.GmailPOMDataDrivernTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

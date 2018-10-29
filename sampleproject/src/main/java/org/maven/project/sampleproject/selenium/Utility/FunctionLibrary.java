@@ -21,6 +21,7 @@ public class FunctionLibrary {
 	public static WebDriverWait wait;
 	
 	public WebDriver launchBrowser(String browser) {
+		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		;
 		wait = new WebDriverWait(driver, 30);

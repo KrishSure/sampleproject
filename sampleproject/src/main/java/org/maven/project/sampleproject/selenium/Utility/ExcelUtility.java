@@ -20,14 +20,17 @@ public class ExcelUtility {
 	public static XSSFRow coloumnNamesRow;
 	public static HashMap<String, String> map;
 	public static String excelFilePath;
+	public static String resultFile;
 
 	public static int setExcel(String filePath, String sheetName) {
 		try {
+			FunctionLibrary fl = new FunctionLibrary();
 			excelFilePath = filePath;
 			File file = new File(filePath);
 			book = new XSSFWorkbook(file);
 			sheet = (XSSFSheet) book.getSheet(sheetName);
-			coloumnNamesRow = sheet.getRow(0);			
+			coloumnNamesRow = sheet.getRow(0);	
+			setResultFile("ExcelData\\ReulstFile"+fl.generateUniqueId()+".xls");
 			return sheet.getLastRowNum();
 		} catch (InvalidFormatException e) {
 			// TODO Auto-generated catch block
@@ -41,6 +44,20 @@ public class ExcelUtility {
 
 	}
 
+	public static void setResultFile(String filePath) {
+		resultFile = filePath;
+	}
+
+	public static void excelIntialization(String filePath, String sheetName) {
+
+
+		book=new XSSFWorkbook();
+		sheet = book.createSheet(sheetName);
+		setResultFile(filePath);
+
+
+
+	}
 
 	public static HashMap<String, String> load(int rowNum) {
 
@@ -82,45 +99,88 @@ public class ExcelUtility {
 	}
 
 	public static void updateCell(String columnName, String value) {		
-		try {
-			map.put(columnName, value);		
 
-			int columnNameCellNum = coloumnNamesRow.getLastCellNum();
-			for(int i=0;i<=columnNameCellNum;i++) {
-				
-				XSSFCell cNamesCell =coloumnNamesRow.getCell(i);
-				
-				if(cNamesCell!=null) {
+		map.put(columnName, value);		
 
-					if(columnName.equals(cNamesCell.getStringCellValue())) {
+		int columnNameCellNum = coloumnNamesRow.getLastCellNum();
+		for(int i=0;i<=columnNameCellNum;i++) {
 
-						//row.getCell(i).setCellValue(value);
-						XSSFCell rowCell = row.getCell(i);
-						
-						if(rowCell!=null)
-							rowCell.setCellValue(value);
-						else
-							row.createCell(i).setCellValue(value);
-						
-						FunctionLibrary fl = new FunctionLibrary();
-						FileOutputStream fileOut = new FileOutputStream("ExcelData\\ReulstFile"+fl.generateUniqueId()+".xls");
+			XSSFCell cNamesCell =coloumnNamesRow.getCell(i);
+
+			if(cNamesCell!=null) {
+
+				if(columnName.equals(cNamesCell.getStringCellValue())) {
+
+					//row.getCell(i).setCellValue(value);
+					XSSFCell rowCell = row.getCell(i);
+
+					if(rowCell!=null)
+						rowCell.setCellValue(value);
+					else
+						row.createCell(i).setCellValue(value);
+
+
+					/*FileOutputStream fileOut = new FileOutputStream(resultFile);
 
 						book.write(fileOut);
 
 						fileOut.flush();
 
-						fileOut.close();
+						fileOut.close();*/
 
-						break;
-					}
+					updateExcelFile(resultFile);
+
+					break;
 				}
 			}
-		} catch (FileNotFoundException e) {
+		}
+
+	}
+	public static void updateExcelFile(String filePath) {
+
+		FileOutputStream fileOut;
+		try {
+
+			fileOut = new FileOutputStream(filePath);
+
+			book.write(fileOut);
+
+			fileOut.flush();
+
+			fileOut.close();
+		}  catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+
+	}
+	public static void printInExcel(int rownum,int columnnum, String value) {
+		XSSFCell cell=null;
+
+		if(rownum==0 || sheet.getLastRowNum()<rownum) {
+			row = sheet.createRow(rownum);	
+			cell = row.createCell(columnnum);	
+			cell.setCellValue(value);
+		}
+		else {			
+			row = sheet.getRow(rownum);
+
+			if(columnnum==0 || row.getLastCellNum()<columnnum)
+				cell = row.createCell(columnnum);		
+			else
+				cell = row.getCell(columnnum);
+			
+			cell.setCellValue(value);
+		}
+		
+		
+			
+
+
+		updateExcelFile(resultFile);
 	}
 }

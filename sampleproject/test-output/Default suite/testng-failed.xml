@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.maven.project.sampleproject.testNG.GmailPOMDataDrivernTest">
+      <class name="org.maven.project.sampleproject.testNG.webtable.WebTableDemoTest">
         <methods>
-          <include name="sendingMail"/>
+          <include name="printAllGainersInfo"/>
         </methods>
-      </class> <!-- org.maven.project.sampleproject.testNG.GmailPOMDataDrivernTest -->
+      </class> <!-- org.maven.project.sampleproject.testNG.webtable.WebTableDemoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

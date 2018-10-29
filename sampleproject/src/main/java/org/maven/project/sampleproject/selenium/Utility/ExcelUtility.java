@@ -160,26 +160,16 @@ public class ExcelUtility {
 	}
 	public static void printInExcel(int rownum,int columnnum, String value) {
 		XSSFCell cell=null;
-
-		if(rownum==0 || sheet.getLastRowNum()<rownum) {
+		row = sheet.getRow(rownum);
+		
+		if(row==null) 		
 			row = sheet.createRow(rownum);	
-			cell = row.createCell(columnnum);	
-			cell.setCellValue(value);
-		}
-		else {			
-			row = sheet.getRow(rownum);
-
-			if(columnnum==0 || row.getLastCellNum()<columnnum)
-				cell = row.createCell(columnnum);		
-			else
-				cell = row.getCell(columnnum);
-			
-			cell.setCellValue(value);
-		}
 		
-		
-			
+		cell = row.getCell(columnnum);	
+		if(cell==null)
+			cell = row.createCell(columnnum);
 
+		cell.setCellValue(value);
 
 		updateExcelFile(resultFile);
 	}

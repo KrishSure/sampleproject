@@ -169,7 +169,9 @@ public class ExcelUtility {
 		if(cell==null)
 			cell = row.createCell(columnnum);
 
-		cell.setCellValue(value);
+		
+			cell.setCellValue(value);
+		
 
 		updateExcelFile(resultFile);
 	}

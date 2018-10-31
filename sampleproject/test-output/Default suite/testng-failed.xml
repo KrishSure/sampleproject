@@ -5,7 +5,9 @@
     <classes>
       <class name="org.maven.project.sampleproject.testNG.webtable.WebTableDemoTest">
         <methods>
-          <include name="printAllGainersInfo"/>
+          <include name="verifyCompanyDetails"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- org.maven.project.sampleproject.testNG.webtable.WebTableDemoTest -->
     </classes>

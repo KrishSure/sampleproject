@@ -74,5 +74,12 @@ public class FunctionLibrary {
 		return UUID.randomUUID().toString();
 	}
 
-
+	public void hardWait(long waitTimeInMilliseconds) {
+		 try {
+				Thread.sleep(waitTimeInMilliseconds);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
 }

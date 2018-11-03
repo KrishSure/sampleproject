@@ -3,6 +3,7 @@ package org.maven.project.sampleproject.testNG;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -25,16 +26,44 @@ public class WindowsDemoTest {
 	}
 	@AfterMethod
 	public void teardown() {
-		//driver.close();
+		driver.quit();
 	}
 	
 	@Test
 	public void demoOpenNewTabbedWindows() {
-		driver.findElement(By.xpath("//a[@href='#Tabbed']")).click();
+		//driver.findElement(By.xpath("//a[@href='#Tabbed']")).click();
+		fl.clickOnElement(driver.findElement(By.xpath("//a[@href='#Tabbed']")));
 		
-		driver.findElement(By.xpath("//div[@id='Tabbed']/a")).click();
+		String window = driver.getWindowHandle();
 		
+		System.out.println("First Window Name : "+window);
 		
+		//driver.findElement(By.xpath("//div[@id='Tabbed']/a")).click();
+		fl.clickOnElement(driver.findElement(By.xpath("//div[@id='Tabbed']/a")));
+				
+		ArrayList<String> windows = new ArrayList<String>();
+		
+		windows.addAll(driver.getWindowHandles());
+		
+		driver.switchTo().window(windows.get(1));
+		
+		//driver.findElement(By.linkText("Download")).click();
+		fl.clickOnElement(driver.findElement(By.linkText("Download")));
+		
+		driver.switchTo().window(windows.get(0));
+		
+		//driver.findElement(By.xpath("//div[@id='Tabbed']/a")).click();
+		fl.clickOnElement(driver.findElement(By.xpath("//div[@id='Tabbed']/a")));
+		
+		ArrayList<String> windows1 = new ArrayList<String>();
+		
+		windows1.addAll(driver.getWindowHandles());
+		
+		driver.switchTo().window(windows1.get(1));
+		
+		fl.hardWait(10000l);
+		//driver.findElement(By.linkText("Download")).click();
+		fl.clickOnElement(driver.findElement(By.linkText("Download")));
 	}
 	
 	@Test

@@ -1,8 +1,13 @@
 package org.maven.project.sampleproject.selenium.Utility;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -81,5 +86,17 @@ public class FunctionLibrary {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+	}
+	
+	public void takescreenshot() {
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File srcFile = ts.getScreenshotAs(OutputType.FILE);
+		File destFile = new File("Screenshots//Screenshot_"+generateUniqueId()+".png");
+		try {
+			FileUtils.copyFile(srcFile, destFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

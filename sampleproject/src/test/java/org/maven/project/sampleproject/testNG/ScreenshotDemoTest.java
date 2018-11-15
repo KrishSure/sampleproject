@@ -23,6 +23,7 @@ public class ScreenshotDemoTest {
 	WebDriver driver;
 	FunctionLibrary fl;
 
+	
 	@BeforeMethod
 	public void setup() {
 		fl = new FunctionLibrary();

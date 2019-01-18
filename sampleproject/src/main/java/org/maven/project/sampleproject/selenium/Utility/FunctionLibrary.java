@@ -14,13 +14,21 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 public class FunctionLibrary {
 	
 	public FunctionLibrary() {
 		super();
 	}
 	
+	public FunctionLibrary(WebDriver driver) {
+		this.driver = driver;
+	}
 	
+	private static ExtentReports extent = ExtentManager.createInstance();
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
 	public static WebDriver driver;	
 	public static WebDriverWait wait;
@@ -41,8 +49,10 @@ public class FunctionLibrary {
 	{	
 		WebElement foundElement = checkingVisibiliy(element);
 		foundElement = elementIsClickable(foundElement);
-		if(isElementDisplayed(foundElement))
+		if(isElementDisplayed(foundElement)) {
 			foundElement.click();
+			test.get().info("Screenshot : <a href='" +takescreenshot()+"'> here </a>");
+		}
 		else
 			System.out.println("element is not visible");
 	}
@@ -88,15 +98,16 @@ public class FunctionLibrary {
 			}
 	}
 	
-	public void takescreenshot() {
+	public String takescreenshot() {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);
-		File destFile = new File("Screenshots//Screenshot_"+generateUniqueId()+".png");
+		File destFile = new File("Screenshots//Screenshot_"+generateUniqueId()+".jpg");
 		try {
 			FileUtils.copyFile(srcFile, destFile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return destFile.getAbsolutePath();
 	}
 }

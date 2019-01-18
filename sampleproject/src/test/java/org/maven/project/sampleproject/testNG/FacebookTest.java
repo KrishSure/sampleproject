@@ -19,7 +19,7 @@ public class FacebookTest {
 		//setup
 		WebDriver driver;
 
-		//System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "drivers\\geckodriver.exe");
 
 		driver = new FirefoxDriver();
 

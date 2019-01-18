@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
+  <parameter name="errormessage" value="The email address that you&#039;ve entered doesn&#039;t match any account."/>
   <parameter name="UserName" value="seleniumjava75@gmail.com"/>
   <parameter name="Password" value="Seleniumjava@75"/>
   <test name="Test(failed)">
+    <parameter name="errormessage" value="The email address that you&#039;ve entered doesn&#039;t match any account."/>
     <parameter name="UserName" value="seleniumjava75@gmail.com"/>
     <parameter name="Password" value="Seleniumjava@75"/>
     <classes>
       <class name="org.maven.project.sampleproject.testNG.ParametersDemo">
         <methods>
-          <include name="facbookLogin"/>
+          <include name="facbookLogin" invocation-numbers="0"/>
         </methods>
       </class> <!-- org.maven.project.sampleproject.testNG.ParametersDemo -->
     </classes>

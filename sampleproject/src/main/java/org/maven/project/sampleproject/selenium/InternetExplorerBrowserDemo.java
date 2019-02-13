@@ -43,7 +43,7 @@ public class InternetExplorerBrowserDemo {
 
 		driver.get("https://www.facebook.com/");
 
-		driver.findElement(By.name("email")).sendKeys("dilipkumarpv8899@gmail.com");
+		driver.findElement(By.id("email")).sendKeys("dilipkumarpv8899@gmail.com");
 
 		/*By passwordBy = By.id("pass");
 

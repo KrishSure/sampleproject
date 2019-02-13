@@ -10,7 +10,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-public class TestListener implements ITestListener {
+public class TestListener extends ExtentManager implements ITestListener {
 	 
     //Extent Report Declarations
     private static ExtentReports extent = ExtentManager.createInstance();
@@ -24,6 +24,7 @@ public class TestListener implements ITestListener {
     public synchronized void onFinish(ITestContext context) {
         System.out.println(("Extent Reports Version 3  Test Suite is ending!"));
         extent.flush();
+        System.out.println("Generated the report");
     }
  
     @Override
